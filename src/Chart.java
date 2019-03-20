@@ -12,7 +12,7 @@ public class Chart {
 		char[] code_brut = this.getCodage().getCodeBrut();
 		String title = this.getCodage().getTitle();
 
-	    NumberAxis xAxis = new NumberAxis("", 0, code_brut.length, 0.5);
+	    NumberAxis xAxis = new NumberAxis("Temps", 0, code_brut.length, 0.5);
 	    NumberAxis yAxis = new NumberAxis("Tension", -1.5, 1.5, 1);
 	    
 		yAxis.setMinorTickCount(0);

@@ -8,8 +8,8 @@ public class Ligne {
 		this.fin = new Point();
 	}	
 	public Ligne(Point pd, Point pf) {
-		this.debut = pd;
-		this.fin = pf;
+		this.setDebut( pd );
+		this.setFin( pf );
 	}
 
 	// getter & setter Debut

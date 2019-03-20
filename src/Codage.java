@@ -32,20 +32,14 @@ public class Codage {
 
 	// return the code as array ex : [0,1,0,1,0] 
 	public char[] getCodeBrut() {
-		return this.code.toCharArray();
+		return this.getCode().toCharArray();
 	}
 
 	// transform the points as lignes 
 	public void transform() {
 		float x = 0,y =0 ;
-		char c = '.';
-		char Nextc = '.';
 		
-		char[] Cbrut = this.getCodeBrut();
-		
-		for ( int i=0 ; i<Cbrut.length ; i++ ) {
-			c = Cbrut[i];
-			
+		for ( char c : this.getCodeBrut() ) {			
 			Ligne l = new Ligne();
 
 			l = this.traceLigne(l, x, y, c);
@@ -71,7 +65,7 @@ public class Codage {
 	public float positionY(char c) {
 		return 0;
 	}
-	public float positionX(float x,char c,char nextC) {
+	public float positionX(float x,char c) {
 		return 0;
 	}
 	

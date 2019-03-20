@@ -11,14 +11,14 @@ public class NRZ extends Codage {
 	public float positionY(char c) {
 		return ( c == '0' ) ? -1 : 1;
 	}
-	public float positionX(float x,char c,char nextC) {
+	public float positionX(float x,char c) {
 		return x+1;
 	}
 	
 	public Ligne traceLigne(Ligne l, float x, float y, char c) {
 		y = this.positionY( c );
 		l.setDebut( new Point(x,y) );
-		x = this.positionX( x, c ,c);
+		x = this.positionX( x, c );
 		l.setFin( new Point(x,y) );
 		
 		return l;

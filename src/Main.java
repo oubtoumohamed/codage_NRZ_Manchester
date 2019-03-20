@@ -54,10 +54,10 @@ public class Main extends Application {
 	            	if( binaryCode.getText().isEmpty() ) {		            	
 	            		erreur = "SVP : Tapez un code binaire !!";	            	
 	            	}else if( !binaryCode.getText().replaceAll("[01]", "").isEmpty() ) {	            	
-	            		erreur = "SVP : Tapez un valide code binaire !!";	            	
+	            		erreur = "SVP : Tapez un code binaire valide !!";	            	
 	            	}else if( TypeComboBox.getValue() == null ) {	            		
-	            		erreur = "SVP : choisir un type pour contenu !!";	            	
-	            	}else  {
+	            		erreur = "SVP : choisir un type pour continue !!";	            	
+	            	}else  {	
 		            	switch( TypeComboBox.getValue().toString() ) {
 		            		case "NRZ":
 		            			codage = new NRZ();
@@ -66,11 +66,13 @@ public class Main extends Application {
 		            			codage = new Manchester();
 		            			break;
 		            	}
+
+	            		erreurText.setText(erreur);
 		            	codage.setCode( binaryCode.getText() );		            	
 		            	Chart chart = new Chart();
 		            	chart.setCodage( codage );
 		            	chart.make();
-	            	}	            	
+	            	}
             		erreurText.setText(erreur);
 	            }
 	        });
